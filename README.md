@@ -2,8 +2,8 @@
 
 A multi-service, asynchronous web application built to showcase modern DevOps practices. This project demonstrates container orchestration, inter-service communication via a message queue, and data persistence in a decoupled microservice architecture.
 
-![Live Demo Screenshot]([images\livedemo1.png](https://github.com/Animesh-108/PollingApp-Devops-Project/blob/main/images/livedemo1.png))
-![Live Demo Screenshot]([images\livedemo2.png](https://github.com/Animesh-108/PollingApp-Devops-Project/blob/main/images/livedemo2.png))
+![Live Demo Screenshot](https://github.com/Animesh-108/PollingApp-Devops-Project/blob/main/images/livedemo1.png)
+![Live Demo Screenshot](https://github.com/Animesh-108/PollingApp-Devops-Project/blob/main/images/livedemo2.png)
 
 
 ---
