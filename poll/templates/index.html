@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cats vs Dogs Poll</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #f4f4f9; }
+        h1 { color: #333; }
+        .options { margin: 30px 0; }
+        button {
+            font-size: 24px;
+            padding: 20px 40px;
+            margin: 0 20px;
+            cursor: pointer;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover { background-color: #0056b3; }
+        #message { margin-top: 20px; font-size: 18px; color: #28a745; }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Poll</h1>
+    <h2>Which do you prefer?</h2>
+    <div class="options">
+        <button onclick="vote('cats')">🐱 Cats</button>
+        <button onclick="vote('dogs')">🐶 Dogs</button>
+    </div>
+    <div id="message"></div>
+
+    <script>
+    function vote(option) {
+        const messageDiv = document.getElementById('message');
+        
+        // Use the fetch API to send a POST request to our backend
+        fetch('/vote', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `vote=${option}`
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Display a success message
+            messageDiv.textContent = `Thank you for your vote for ${option}!`;
+            console.log(data); // Log the response from the server
+        })
+        .catch((error) => {
+            // Display an error message
+            messageDiv.textContent = 'Error submitting vote. Please try again.';
+            console.error('Error:', error);
+        });
+    }
+</script>
+</body>
+</html>
