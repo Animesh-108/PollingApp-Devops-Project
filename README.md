@@ -2,8 +2,9 @@
 
 A multi-service, asynchronous web application built to showcase modern DevOps practices. This project demonstrates container orchestration, inter-service communication via a message queue, and data persistence in a decoupled microservice architecture.
 
-![Live Demo Screenshot](https://placehold.co/800x400/333333/FFFFFF?text=Project+Screenshot+Here)
-*This is a placeholder for a screenshot or GIF of your application in action.*
+![Live Demo Screenshot](images\livedemo1.png)
+![Live Demo Screenshot](images\livedemo2.png)
+
 
 ---
 
